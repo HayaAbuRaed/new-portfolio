@@ -31,3 +31,53 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1em;
+  padding-inline: 1.7rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 6.56rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-right: 1em;
+}
+
+nav ul li:last-child {
+  padding-right: 0;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4d5d6;
+  font-size: 1.03rem;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+}
