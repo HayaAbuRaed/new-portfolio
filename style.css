@@ -7,3 +7,27 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+section {
+  height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url("assets/main-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
