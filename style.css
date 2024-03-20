@@ -431,16 +431,109 @@ nav a:hover {
 }
 
 .exp-header {
-  display: inherit;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1.1rem;
   padding-top: 0.2em;
 }
 
 .exp-heading {
   padding-left: 0.5rem;
+}
+
+.check-point {
+  max-width: 35em;
+  position: relative;
+  padding-block: 2em;
+}
+
+.check-point-content {
+  background-color: #f1f1f1;
+  color: #1b1b1b;
+  border-radius: 0.5rem;
+  padding: 1.5em 1.7em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.check-point-content h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.check-point-content p {
+  font-weight: 500;
+}
+
+.check-point:nth-child(odd) {
+  border-left: #f1f1f1 solid;
+  transform: translateX(17.5em);
+  padding-left: 3em;
+}
+
+.check-point:nth-child(even) {
+  border-right: #f1f1f1 solid;
+  transform: translateX(-17.35em);
+  padding-right: 3em;
+}
+
+.check-point-content::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 3em;
+  border-block: 0.7em solid transparent;
+}
+
+.check-point:nth-child(even) .check-point-content::after {
+  border-left: 0.7em solid #f1f1f1;
+  right: 2.3em;
+}
+
+.check-point:nth-child(odd) .check-point-content::after {
+  border-right: 0.7em solid #f1f1f1;
+  left: 2.3em;
+}
+
+.check-point-dot {
+  background-color: #f1f1f1;
+  color: #1b1b1b;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-point-dot .fa-solid {
+  font-size: 1.25rem;
+}
+
+.check-point:nth-child(odd) .check-point-dot {
+  left: -1.5em;
+}
+
+.check-point:nth-child(even) .check-point-dot {
+  right: -1.7em;
+}
+
+.duration {
+  position: absolute;
+  top: 3em;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 100;
+}
+
+.check-point:nth-child(odd) .duration {
+  left: -13.5em;
+}
+
+.check-point:nth-child(even) .duration {
+  right: -13.5em;
 }
 
 /********** Scrollbar styling *************/
