@@ -307,6 +307,7 @@ nav a:hover {
 .skills-section p {
   /* font-weight: 500; */
   text-transform: uppercase;
+  text-align: center;
 }
 
 .fa-node-js,
@@ -382,6 +383,17 @@ nav a:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icons-cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons-card {
+    max-width: 500px;
   }
 }
 
