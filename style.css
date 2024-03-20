@@ -280,6 +280,123 @@ nav a:hover {
   }
 }
 
+/********** SKILLS SECTION **********/
+.skills-section {
+  padding-block: 4.5em 3.5em;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
+.skills-heading {
+  font-size: 2.5rem;
+  letter-spacing: 0.08rem;
+  padding-left: 1.7rem;
+}
+
+.heading-shadow-box {
+  position: absolute;
+  top: 2.2rem;
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  color: rgb(225, 5, 99, 0.16);
+  z-index: -1;
+  gap: 0.1rem;
+}
+
+.skills-section p {
+  /* font-weight: 500; */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.fa-node-js,
+.fa-code-branch {
+  position: absolute;
+  font-size: 3.5rem;
+  color: rgb(225, 5, 99, 0.4);
+  animation: fade 3s infinite ease-in-out;
+  z-index: -1;
+}
+
+.fa-node-js {
+  left: -5px;
+  top: 7rem;
+  rotate: 10deg;
+}
+
+.fa-code-branch {
+  right: -10px;
+  bottom: 1rem;
+  rotate: -20deg;
+  animation-delay: 3s;
+}
+
+.icons-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  color: #f1f1f1;
+}
+
+.full-row {
+  grid-column: 1 / 3;
+}
+
+.icons-card {
+  background-color: #1b1b1b;
+  padding: 2.5rem 2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.icons-card h3 {
+  font-size: 1.25rem;
+}
+
+.icons-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  width: 4rem;
+}
+
+.icon:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icons-cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons-card {
+    max-width: 500px;
+  }
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
