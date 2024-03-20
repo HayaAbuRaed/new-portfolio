@@ -280,14 +280,10 @@ nav a:hover {
   }
 }
 
-/********* SKILLS SECTION **********/
+/********** SKILLS SECTION **********/
 .skills-section {
-  padding: 4.5em 5em 3.5em 5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-block: 4.5em 3.5em;
   gap: 2rem;
-  position: relative;
   overflow-x: hidden;
 }
 
@@ -306,12 +302,33 @@ nav a:hover {
   color: rgb(225, 5, 99, 0.16);
   z-index: -1;
   gap: 0.1rem;
-  font-weight: 1000;
 }
 
 .skills-section p {
   /* font-weight: 500; */
   text-transform: uppercase;
+}
+
+.fa-node-js,
+.fa-code-branch {
+  position: absolute;
+  font-size: 3.5rem;
+  color: rgb(225, 5, 99, 0.4);
+  animation: fade 3s infinite ease-in-out;
+  z-index: -1;
+}
+
+.fa-node-js {
+  left: -5px;
+  top: 7rem;
+  rotate: 10deg;
+}
+
+.fa-code-branch {
+  right: -10px;
+  bottom: 1rem;
+  rotate: -20deg;
+  animation-delay: 3s;
 }
 
 /********** Scrollbar styling *************/
