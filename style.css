@@ -423,7 +423,7 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .experience-section h2 {
@@ -453,7 +453,7 @@ nav a:hover {
   padding: 1.5em 1.7em;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.2em;
 }
 
 .check-point-content h3 {
@@ -463,6 +463,21 @@ nav a:hover {
 
 .check-point-content p {
   font-weight: 500;
+  font-family: sora, sans-serif;
+}
+
+.check-point-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.check-point-content h3 ~ p {
+  color: teal;
+}
+
+.check-point-title ~ p {
+  font-weight: 600;
 }
 
 .check-point:nth-child(odd) {
@@ -512,6 +527,11 @@ nav a:hover {
   font-size: 1.25rem;
 }
 
+.fa-connectdevelop,
+.fa-react {
+  font-size: 1.5rem;
+}
+
 .check-point:nth-child(odd) .check-point-dot {
   left: -1.5em;
 }
@@ -522,18 +542,25 @@ nav a:hover {
 
 .duration {
   position: absolute;
-  top: 3em;
+  top: 2.6em;
   font-weight: 600;
-  font-size: 1rem;
-  z-index: 100;
+  font-size: 1.1rem;
 }
 
 .check-point:nth-child(odd) .duration {
-  left: -13.5em;
+  left: -10.5em;
 }
 
 .check-point:nth-child(even) .duration {
-  right: -13.5em;
+  right: -13.2em;
+}
+
+.check-point:first-child .duration {
+  left: -8.5em;
+}
+
+.check-point:last-child .duration {
+  right: -10.5em;
 }
 
 /********** Scrollbar styling *************/
