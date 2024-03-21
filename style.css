@@ -563,6 +563,10 @@ nav a:hover {
   right: -10.5em;
 }
 
+.check-point-content.no-details {
+  gap: 0.6em;
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
