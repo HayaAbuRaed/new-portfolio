@@ -582,6 +582,10 @@ nav a:hover {
 }
 
 @media screen and (max-width: 750px) {
+  .experience-section {
+    overflow: hidden;
+  }
+
   .timeline-tree {
     display: flex;
     flex-direction: column;
@@ -589,8 +593,16 @@ nav a:hover {
     justify-content: center;
   }
 
+  .heading-shadow-box {
+    display: none;
+  }
+
+  .exp-heading {
+    padding: 0;
+  }
+
   .check-point-content {
-    max-width: 30em;
+    max-width: 4000em;
   }
 
   .check-point:nth-child(odd),
@@ -619,14 +631,16 @@ nav a:hover {
     left: -1.5em;
   }
 
-  .duration {
-    max-width: 7em;
-    display: none;
-  }
-
   .check-point:nth-child(even) .duration,
   .check-point:nth-child(odd) .duration {
-    left: -8em;
+    left: 3em;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .check-point-content {
+    max-width: 13.5em;
   }
 }
 
