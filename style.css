@@ -397,6 +397,253 @@ nav a:hover {
   }
 }
 
+/********** EXPERIENCE SECTION **********/
+.experience-section {
+  /* background-image: url(assets/exp-background4.jpg); */
+  background-image: url(assets/exp-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  position: relative;
+  z-index: 100;
+  color: #f1f1f1;
+  padding: 3rem 5rem;
+  gap: 3em;
+}
+
+.experience-section * {
+  z-index: 1;
+}
+
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.experience-section h2 {
+  font-size: 1.7rem;
+}
+
+.exp-header {
+  flex-direction: column;
+  gap: 1.1rem;
+  padding-top: 0.2em;
+}
+
+.exp-heading {
+  padding-left: 0.5rem;
+}
+
+.check-point {
+  max-width: 35em;
+  position: relative;
+  padding-block: 2em;
+}
+
+.check-point-content {
+  background-color: #f1f1f1;
+  color: #1b1b1b;
+  border-radius: 0.5rem;
+  padding: 1.5em 1.7em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.check-point-content h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.check-point-content p {
+  font-weight: 500;
+  font-family: sora, sans-serif;
+}
+
+.check-point-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.check-point-content h3 ~ p {
+  color: teal;
+}
+
+.check-point-title ~ p {
+  font-weight: 600;
+}
+
+.check-point:nth-child(odd) {
+  border-left: #f1f1f1 solid;
+  transform: translateX(17.5em);
+  padding-left: 3em;
+}
+
+.check-point:nth-child(even) {
+  border-right: #f1f1f1 solid;
+  transform: translateX(-17.35em);
+  padding-right: 3em;
+}
+
+.check-point-content::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 3em;
+  border-block: 0.7em solid transparent;
+}
+
+.check-point:nth-child(even) .check-point-content::after {
+  border-left: 0.7em solid #f1f1f1;
+  right: 2.3em;
+}
+
+.check-point:nth-child(odd) .check-point-content::after {
+  border-right: 0.7em solid #f1f1f1;
+  left: 2.3em;
+}
+
+.check-point-dot {
+  background-color: #f1f1f1;
+  color: #1b1b1b;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-point-dot .fa-solid {
+  font-size: 1.25rem;
+}
+
+.fa-connectdevelop,
+.fa-react {
+  font-size: 1.5rem;
+}
+
+.check-point:nth-child(odd) .check-point-dot {
+  left: -1.5em;
+}
+
+.check-point:nth-child(even) .check-point-dot {
+  right: -1.7em;
+}
+
+.duration {
+  position: absolute;
+  top: 2.6em;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.check-point:nth-child(odd) .duration {
+  left: -10.5em;
+}
+
+.check-point:nth-child(even) .duration {
+  right: -13.2em;
+}
+
+.check-point:first-child .duration {
+  left: -8.5em;
+}
+
+.check-point:last-child .duration {
+  right: -10.5em;
+}
+
+.check-point-content.no-details {
+  gap: 0.6em;
+}
+
+@media screen and (max-width: 1200px) {
+  .check-point-content {
+    max-width: 20em;
+  }
+
+  .check-point:nth-child(odd) {
+    transform: translateX(11.5em);
+  }
+
+  .check-point:nth-child(even) {
+    transform: translateX(-11.5em);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .experience-section {
+    overflow: hidden;
+  }
+
+  .timeline-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading-shadow-box {
+    display: none;
+  }
+
+  .exp-heading {
+    padding: 0;
+  }
+
+  .check-point-content {
+    max-width: 4000em;
+  }
+
+  .check-point:nth-child(odd),
+  .check-point:nth-child(even) {
+    transform: translateX(0em);
+  }
+
+  .check-point:nth-child(even) {
+    border-left: #f1f1f1 solid;
+    border-right: none;
+    padding-left: 3em;
+    padding-right: 0;
+  }
+
+  .check-point:nth-child(even) .check-point-content::after,
+  .check-point:nth-child(odd) .check-point-content::after {
+    border-right: 0.7em solid #f1f1f1;
+    border-left: none;
+  }
+
+  .check-point:nth-child(even) .check-point-content::after {
+    left: 2.3em;
+  }
+
+  .check-point:nth-child(even) .check-point-dot {
+    left: -1.5em;
+  }
+
+  .check-point:nth-child(even) .duration,
+  .check-point:nth-child(odd) .duration {
+    left: 3em;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .check-point-content {
+    max-width: 13.5em;
+  }
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
