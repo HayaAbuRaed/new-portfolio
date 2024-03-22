@@ -644,6 +644,12 @@ nav a:hover {
   }
 }
 
+/********** PROJECTS SECTION **********/
+.projects-section {
+  padding-block: 4em;
+  gap: 5em;
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
