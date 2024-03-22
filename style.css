@@ -723,6 +723,14 @@ nav a:hover {
   font-size: small;
 }
 
+.project-description a {
+  text-decoration: none;
+  text-align: center;
+  color: teal;
+  font-weight: 600;
+  padding-block: 1em;
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
