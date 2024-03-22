@@ -287,7 +287,8 @@ nav a:hover {
   overflow-x: hidden;
 }
 
-.skills-heading {
+.skills-heading,
+.projects-heading {
   font-size: 2.5rem;
   letter-spacing: 0.08rem;
   padding-left: 1.7rem;
@@ -593,7 +594,7 @@ nav a:hover {
     justify-content: center;
   }
 
-  .heading-shadow-box {
+  .experience-section .heading-shadow-box {
     display: none;
   }
 
@@ -641,6 +642,116 @@ nav a:hover {
 @media screen and (max-width: 357px) {
   .check-point-content {
     max-width: 13.5em;
+  }
+}
+
+/********** PROJECTS SECTION **********/
+.projects-section {
+  padding-block: 4em;
+  gap: 5em;
+}
+
+.projects-header-box {
+  flex-direction: column;
+  gap: 1em;
+}
+
+.projects-header-box p {
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.project-box {
+  display: grid;
+  column-gap: 5em;
+  row-gap: 10em;
+}
+
+.project-box:nth-child(even) {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+
+.project-box:nth-child(odd) {
+  grid-template-columns: 1.3fr 0.7fr;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.project-description h3 {
+  font-size: 1.3rem;
+}
+
+.project-description h3 ~ p {
+  color: teal;
+  font-size: 1rem;
+}
+
+.project-description p {
+  font-family: sora, sans-serif;
+  font-weight: 500;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+}
+
+.project-pic {
+  width: 100%;
+  max-width: 500px;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+
+.chip {
+  border-radius: 2em;
+  padding-block: 0.25em;
+  padding-inline: 0.75em;
+  background: #e06098;
+  color: #f1f1f1;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.chip .fa-react {
+  font-size: small;
+}
+
+.project-description a {
+  text-decoration: none;
+  text-align: center;
+  color: teal;
+  font-weight: 600;
+  padding-block: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-box:nth-child(even),
+  .project-box:nth-child(odd) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .project-box:nth-child(odd) {
+    flex-direction: column-reverse;
   }
 }
 
