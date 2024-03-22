@@ -704,6 +704,25 @@ nav a:hover {
   max-width: 500px;
 }
 
+.chips-container {
+  display: flex;
+  gap: 0.35em;
+}
+
+.chip {
+  border-radius: 2em;
+  padding-block: 0.25em;
+  padding-inline: 0.75em;
+  background: #e06098;
+  color: #f1f1f1;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.chip .fa-react {
+  font-size: small;
+}
+
 /********** Scrollbar styling *************/
 ::-webkit-scrollbar {
   width: 10.5px;
