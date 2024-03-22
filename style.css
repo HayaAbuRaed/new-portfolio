@@ -594,7 +594,7 @@ nav a:hover {
     justify-content: center;
   }
 
-  .heading-shadow-box {
+  .experience-section .heading-shadow-box {
     display: none;
   }
 
@@ -656,6 +656,10 @@ nav a:hover {
   gap: 1em;
 }
 
+.projects-header-box p {
+  text-align: center;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -706,6 +710,7 @@ nav a:hover {
 
 .chips-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.35em;
 }
 
@@ -729,6 +734,25 @@ nav a:hover {
   color: teal;
   font-weight: 600;
   padding-block: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-box:nth-child(even),
+  .project-box:nth-child(odd) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .project-box:nth-child(odd) {
+    flex-direction: column-reverse;
+  }
 }
 
 /********** Scrollbar styling *************/
