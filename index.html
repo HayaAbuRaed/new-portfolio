@@ -9,11 +9,20 @@
   </head>
 
   <body>
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="splash-screen center-content">
+      <div>
+        <img src="assets/icon.png" alt="icon" class="logo-icon" />
+        <img src="assets/name.png" alt="name" class="logo-name" />
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <div class="overlay"></div>
 
       <header>
-        <a href="#"><img src="assets/logo.png" alt="logo" class="logo" /> </a>
+        <a href="#"> <img src="assets/logo.png" alt="logo" class="logo" /> </a>
 
         <nav class="header-nav">
           <ul>
@@ -385,5 +394,56 @@
         </div>
       </div>
     </section>
+
+    <footer>
+      <ul class="social-list">
+        <li>
+          <a href="https://github.com/HayaAbuRaed" class="github">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="" class="discord">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+        </li> -->
+        <li>
+          <!-- TODO -->
+          <a href="" class="linkedin">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://gitlab.com/hayaa.aburaed" class="gitlab">
+            <i class="fa-brands fa-gitlab"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" class="facebook">
+            <i class="fa-brands fa-facebook"> </i
+          ></a>
+        </li>
+        <li>
+          <a href="tel:+970599435933" class="phone">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:hayaa.aburaed@gmail.com" class="mail">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <p>&copy; Haya Abu-Raed 2024</p>
+      </div>
+    </footer>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("splash").classList.toggle("fade-up");
+      }, 2000);
+    </script>
   </body>
 </html>
