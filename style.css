@@ -10,6 +10,8 @@ body {
   font-family: "Inter", sans-serif;
   color: #1b1b1b;
   background-color: #f5f5f5;
+  --hero-loading-delay: 2s;
+  --hero-loading-time: 0.75s;
 }
 
 * {
@@ -30,6 +32,7 @@ section {
   align-items: center;
   position: relative;
   padding-inline: 5em;
+  overflow: hidden;
 }
 
 .center-content {
@@ -43,6 +46,14 @@ section {
   width: 15%;
   height: 0.25rem;
   background-color: #e10563;
+}
+
+.background-icon {
+  position: absolute;
+  font-size: 3.5rem;
+  color: rgb(225, 5, 99, 0.6);
+  animation: fade 3s infinite ease-in-out;
+  z-index: -1;
 }
 
 /********** SPLASH SCREEN **********/
@@ -130,6 +141,7 @@ header {
 
 .logo {
   width: 6.56rem;
+  animation-name: appear;
 }
 
 nav ul {
@@ -137,15 +149,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav ul li {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-nav ul li:last-child {
-  padding-right: 0;
+  gap: 1em;
 }
 
 nav a {
@@ -158,8 +162,27 @@ nav a {
 
 nav a:hover {
   color: #d4d5d6;
-  font-size: 1.03rem;
+  font-size: 1.1rem;
   transform: scale(1.1);
+}
+
+nav li {
+  animation-name: appear;
+  transform: scale(0);
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .hero-main-section {
@@ -180,13 +203,66 @@ nav a:hover {
   gap: 1.5rem;
 }
 
+.heading,
+.profession,
+.arrows-container,
+.logo,
+nav li {
+  animation-duration: var(--hero-loading-time);
+  animation-timing-function: ease-out;
+  animation-delay: var(--hero-loading-delay);
+  animation-fill-mode: forwards;
+}
+
+.profession,
+.arrows-container {
+  transform: translateY(-1.25rem);
+  opacity: 0;
+}
+
 .heading {
   font-size: 4rem;
+  animation-name: revealUpAnimation;
+  transform: translateY(2.5rem);
+  opacity: 0;
+}
+
+@keyframes revealUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .profession {
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
+
+  animation-name: revealDownAnimation;
+}
+
+@keyframes revealDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.25rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.arrows-container {
+  flex-direction: column;
+  gap: 0.35em;
+
+  animation-name: revealUpAnimation;
 }
 
 .arrow-down {
@@ -201,7 +277,6 @@ nav a:hover {
 .smaller-arrow-down {
   border-inline: 0.7rem solid transparent;
   border-top-width: 1rem;
-  margin-top: 0.35em;
 }
 
 @keyframes arrowBounce {
@@ -325,6 +400,13 @@ nav a:hover {
   text-align: justify;
 }
 
+.about-section .fa-address-card {
+  font-size: 3rem;
+  right: -10px;
+  bottom: 1rem;
+  rotate: 10deg;
+}
+
 @media (max-width: 600px) {
   .about-section h2 {
     font-size: 1.5rem;
@@ -366,22 +448,13 @@ nav a:hover {
   text-align: center;
 }
 
-.fa-node-js,
-.fa-code-branch {
-  position: absolute;
-  font-size: 3.5rem;
-  color: rgb(225, 5, 99, 0.6);
-  animation: fade 3s infinite ease-in-out;
-  z-index: -1;
-}
-
-.fa-node-js {
+.skills-section .fa-node-js {
   left: -5px;
   top: 7rem;
   rotate: 10deg;
 }
 
-.fa-code-branch {
+.skills-section .fa-code-branch {
   right: -10px;
   bottom: 1rem;
   rotate: -20deg;
@@ -791,6 +864,13 @@ nav a:hover {
   padding-block: 1em;
 }
 
+.projects-section .fa-desktop {
+  font-size: 3rem;
+  left: -0.85rem;
+  bottom: 2rem;
+  rotate: 10deg;
+}
+
 @media screen and (max-width: 1024px) {
   .project-box:nth-child(even),
   .project-box:nth-child(odd) {
@@ -812,7 +892,7 @@ nav a:hover {
 
 /********** FOOTER SECTION **********/
 footer {
-  height: 14em;
+  min-height: 14em;
   background: radial-gradient(
     circle,
     rgb(50, 50, 50, 1) 0%,
@@ -829,8 +909,18 @@ footer {
 .social-list {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5em;
+}
+
+.social-list li {
+  /* display: inline-block; */
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-list a {
@@ -880,6 +970,23 @@ footer div {
   border-top: 2px solid;
   min-width: 20em;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    padding-bottom: 2em;
+    gap: 2rem;
+  }
+
+  .social-list a {
+    font-size: 1.5rem;
+    padding-block: 0.3em;
+    padding-inline: 0.8rem;
+  }
+
+  .social-list a:hover {
+    font-size: 1.8rem;
+  }
 }
 
 /********** Scrollbar styling *************/
