@@ -198,6 +198,11 @@ nav a:hover {
   letter-spacing: 0.1rem;
 }
 
+.arrows-container {
+  flex-direction: column;
+  gap: 0.35em;
+}
+
 .arrow-down {
   width: 0;
   height: 0;
@@ -210,7 +215,6 @@ nav a:hover {
 .smaller-arrow-down {
   border-inline: 0.7rem solid transparent;
   border-top-width: 1rem;
-  margin-top: 0.35em;
 }
 
 @keyframes arrowBounce {
