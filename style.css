@@ -87,7 +87,7 @@ section {
 }
 
 .logo-name {
-  animation: move-left ease-in-out 0.7s;
+  animation: move-left ease-in-out 0.6s;
 }
 
 @keyframes move-left {
@@ -808,6 +808,78 @@ nav a:hover {
   .project-box:nth-child(odd) {
     flex-direction: column-reverse;
   }
+}
+
+/********** FOOTER SECTION **********/
+footer {
+  height: 14em;
+  background: radial-gradient(
+    circle,
+    rgb(50, 50, 50, 1) 0%,
+    rgba(27, 27, 27, 1) 100%
+  );
+  color: #f1f1f1;
+  padding: 3em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.social-list a {
+  color: #f1f1f1;
+  transition: ease-in-out 0.3s;
+  background-color: #7f7f7f;
+  font-size: 1.75rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.social-list a:hover {
+  font-size: 2.3rem;
+}
+
+.social-list .github:hover {
+  background-color: #1b1b1b;
+}
+
+.social-list .discord:hover {
+  background-color: #5865f2;
+}
+
+.social-list .linkedin:hover {
+  background-color: #0077b5;
+}
+
+.social-list .gitlab:hover {
+  background-color: #fca326;
+}
+
+.social-list .facebook:hover {
+  background-color: #1877f2;
+}
+
+.social-list .phone:hover {
+  background-color: #25d366;
+}
+
+.social-list .mail:hover {
+  background-color: #db4437;
+}
+
+footer div {
+  margin-top: auto;
+  padding-top: 1.25em;
+  border-top: 2px solid;
+  min-width: 20em;
+  text-align: center;
 }
 
 /********** Scrollbar styling *************/
