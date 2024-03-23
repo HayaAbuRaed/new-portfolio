@@ -10,6 +10,8 @@ body {
   font-family: "Inter", sans-serif;
   color: #1b1b1b;
   background-color: #f5f5f5;
+  --hero-loading-delay: 2s;
+  --hero-loading-time: 0.75s;
 }
 
 * {
@@ -139,6 +141,7 @@ header {
 
 .logo {
   width: 6.56rem;
+  animation-name: appear;
 }
 
 nav ul {
@@ -146,15 +149,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-nav ul li {
-  display: inline-block;
-  padding-right: 1em;
-}
-
-nav ul li:last-child {
-  padding-right: 0;
+  gap: 1em;
 }
 
 nav a {
@@ -167,8 +162,27 @@ nav a {
 
 nav a:hover {
   color: #d4d5d6;
-  font-size: 1.03rem;
+  font-size: 1.1rem;
   transform: scale(1.1);
+}
+
+nav li {
+  animation-name: appear;
+  transform: scale(0);
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .hero-main-section {
@@ -189,18 +203,66 @@ nav a:hover {
   gap: 1.5rem;
 }
 
+.heading,
+.profession,
+.arrows-container,
+.logo,
+nav li {
+  animation-duration: var(--hero-loading-time);
+  animation-timing-function: ease-out;
+  animation-delay: var(--hero-loading-delay);
+  animation-fill-mode: forwards;
+}
+
+.profession,
+.arrows-container {
+  transform: translateY(-1.25rem);
+  opacity: 0;
+}
+
 .heading {
   font-size: 4rem;
+  animation-name: revealUpAnimation;
+  transform: translateY(2.5rem);
+  opacity: 0;
+}
+
+@keyframes revealUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .profession {
   font-size: 1.25rem;
   letter-spacing: 0.1rem;
+
+  animation-name: revealDownAnimation;
+}
+
+@keyframes revealDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.25rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .arrows-container {
   flex-direction: column;
   gap: 0.35em;
+
+  animation-name: revealUpAnimation;
 }
 
 .arrow-down {
