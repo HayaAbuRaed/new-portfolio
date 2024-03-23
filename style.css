@@ -830,7 +830,7 @@ nav a:hover {
 
 /********** FOOTER SECTION **********/
 footer {
-  height: 14em;
+  min-height: 14em;
   background: radial-gradient(
     circle,
     rgb(50, 50, 50, 1) 0%,
@@ -847,8 +847,18 @@ footer {
 .social-list {
   list-style-type: none;
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5em;
+}
+
+.social-list li {
+  /* display: inline-block; */
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-list a {
@@ -898,6 +908,23 @@ footer div {
   border-top: 2px solid;
   min-width: 20em;
   text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    padding-bottom: 2em;
+    gap: 2rem;
+  }
+
+  .social-list a {
+    font-size: 1.5rem;
+    padding-block: 0.3em;
+    padding-inline: 0.8rem;
+  }
+
+  .social-list a:hover {
+    font-size: 1.8rem;
+  }
 }
 
 /********** Scrollbar styling *************/
