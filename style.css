@@ -30,6 +30,7 @@ section {
   align-items: center;
   position: relative;
   padding-inline: 5em;
+  overflow: hidden;
 }
 
 .center-content {
@@ -43,6 +44,14 @@ section {
   width: 15%;
   height: 0.25rem;
   background-color: #e10563;
+}
+
+.background-icon {
+  position: absolute;
+  font-size: 3.5rem;
+  color: rgb(225, 5, 99, 0.6);
+  animation: fade 3s infinite ease-in-out;
+  z-index: -1;
 }
 
 /********** SPLASH SCREEN **********/
@@ -325,6 +334,13 @@ nav a:hover {
   text-align: justify;
 }
 
+.about-section .fa-address-card {
+  font-size: 3rem;
+  right: -10px;
+  bottom: 1rem;
+  rotate: 10deg;
+}
+
 @media (max-width: 600px) {
   .about-section h2 {
     font-size: 1.5rem;
@@ -366,22 +382,13 @@ nav a:hover {
   text-align: center;
 }
 
-.fa-node-js,
-.fa-code-branch {
-  position: absolute;
-  font-size: 3.5rem;
-  color: rgb(225, 5, 99, 0.6);
-  animation: fade 3s infinite ease-in-out;
-  z-index: -1;
-}
-
-.fa-node-js {
+.skills-section .fa-node-js {
   left: -5px;
   top: 7rem;
   rotate: 10deg;
 }
 
-.fa-code-branch {
+.skills-section .fa-code-branch {
   right: -10px;
   bottom: 1rem;
   rotate: -20deg;
@@ -789,6 +796,13 @@ nav a:hover {
   color: teal;
   font-weight: 600;
   padding-block: 1em;
+}
+
+.projects-section .fa-desktop {
+  font-size: 3rem;
+  left: -0.85rem;
+  bottom: 2rem;
+  rotate: 10deg;
 }
 
 @media screen and (max-width: 1024px) {
