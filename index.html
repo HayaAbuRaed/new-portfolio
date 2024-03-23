@@ -9,11 +9,20 @@
   </head>
 
   <body>
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="splash-screen center-content">
+      <div>
+        <img src="assets/icon.png" alt="icon" class="logo-icon" />
+        <img src="assets/name.png" alt="name" class="logo-name" />
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <div class="overlay"></div>
 
       <header>
-        <a href="#"><img src="assets/logo.png" alt="logo" class="logo" /> </a>
+        <a href="#"> <img src="assets/logo.png" alt="logo" class="logo" /> </a>
 
         <nav class="header-nav">
           <ul>
@@ -385,5 +394,11 @@
         </div>
       </div>
     </section>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("splash").classList.toggle("fade-up");
+      }, 2000);
+    </script>
   </body>
 </html>
