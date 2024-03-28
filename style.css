@@ -983,6 +983,20 @@ form {
   background-color: #d73a7e;
 }
 
+@media screen and (max-width: 1024px) {
+  .contact-header-box p {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+}
+
 /********** FOOTER SECTION **********/
 footer {
   min-height: 14em;
