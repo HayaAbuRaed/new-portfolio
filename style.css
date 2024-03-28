@@ -906,7 +906,7 @@ nav li {
 /********** Contact Section **********/
 .contact-section {
   min-height: auto;
-  padding-block: 5em 6em;
+  padding-block: 4em 3em;
   display: grid;
   grid-template-columns: 1.3fr 1.7fr;
   column-gap: 3em;
