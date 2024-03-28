@@ -973,6 +973,11 @@ form {
   background-color: rgb(3, 167, 167);
 }
 
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .cv-link {
   font-weight: 600;
   text-decoration: none;
@@ -981,6 +986,12 @@ form {
 
 .cv-link:hover {
   background-color: #d73a7e;
+}
+
+.response {
+  align-self: center;
+  font-weight: 500;
+  color: forestgreen;
 }
 
 @media screen and (max-width: 1024px) {

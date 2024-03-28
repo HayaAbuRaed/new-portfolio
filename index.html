@@ -417,23 +417,44 @@
         <a href="" target="_blank" class="button cv-link">Get my CV</a>
       </div>
 
-      <form id="contact-form">
+      <form id="contact-form" name="submit-to-google-sheet">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="e.g., John Doe"
+          />
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="e.g., john@example.com"
+          />
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="e.g., Hi there, I'd like to inquire about..."
+          ></textarea>
         </div>
 
-        <button type="submit" class="button">Send Message</button>
+        <button type="submit" class="button" id="submitButton">
+          Send Message
+        </button>
+        <span class="response" id="response"></span>
       </form>
     </section>
 
@@ -494,10 +515,6 @@
       </div>
     </footer>
 
-    <script>
-      setTimeout(() => {
-        document.getElementById("splash").classList.toggle("fade-up");
-      }, 2000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
