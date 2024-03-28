@@ -35,6 +35,11 @@ section {
   overflow: hidden;
 }
 
+.section-heading {
+  font-size: 2.5rem;
+  letter-spacing: 0.08rem;
+}
+
 .center-content {
   display: flex;
   justify-content: center;
@@ -426,8 +431,6 @@ nav li {
 
 .skills-heading,
 .projects-heading {
-  font-size: 2.5rem;
-  letter-spacing: 0.08rem;
   padding-left: 1.7rem;
 }
 
@@ -888,6 +891,96 @@ nav li {
   .project-box:nth-child(odd) {
     flex-direction: column-reverse;
   }
+}
+
+/********** Contact Section **********/
+.contact-section {
+  min-height: auto;
+  padding-block: 5em 6em;
+  display: grid;
+  grid-template-columns: 1.3fr 1.7fr;
+  column-gap: 3em;
+}
+
+.contact-header-box {
+  flex-direction: column;
+  gap: 2em;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  padding-block: 1em;
+}
+
+.contact-header-box .heading-shadow-box {
+  top: -0.2em;
+  font-size: 2rem;
+}
+
+.contact-header-box p {
+  font-family: "sora", sans-serif;
+  line-height: 1.75rem;
+  padding: 1.5em 3em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: #666;
+  width: 100%;
+}
+
+.contact-section label {
+  font-family: "sora", sans-serif;
+  padding-left: 0.75em;
+}
+
+.contact-section input,
+.contact-section textarea {
+  display: block;
+  width: 100%;
+  min-height: 3.75em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  font-family: "sora", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-section textarea {
+  min-height: 10em;
+}
+
+.button {
+  padding: 0.625em 2em;
+  background-color: teal;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+}
+
+.button:hover {
+  background-color: rgb(3, 167, 167);
+}
+
+.cv-link {
+  font-weight: 600;
+  text-decoration: none;
+  background-color: #e10563;
+}
+
+.cv-link:hover {
+  background-color: #d73a7e;
 }
 
 /********** FOOTER SECTION **********/
