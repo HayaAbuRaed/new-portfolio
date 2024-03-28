@@ -87,7 +87,7 @@
         <h2 class="heading-shadow-text">Skills</h2>
       </div>
 
-      <h2 class="skills-heading">Skills</h2>
+      <h2 class="section-heading skills-heading">Skills</h2>
 
       <p>Some technologies I've worked with:</p>
 
@@ -158,7 +158,7 @@
       </div>
 
       <div class="exp-header center-content">
-        <div class="exp-heading">
+        <div class="section-heading exp-heading">
           <h2>Education & Experience</h2>
           <span class="divider"></span>
         </div>
@@ -294,6 +294,7 @@
       </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="projects-section">
       <div class="center-content projects-header-box">
         <div class="heading-shadow-box">
@@ -301,7 +302,7 @@
           <h2 class="heading-shadow-text">Projects</h2>
         </div>
 
-        <h2 class="projects-heading">Projects</h2>
+        <h2 class="section-heading projects-heading">Projects</h2>
 
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est,
@@ -309,7 +310,6 @@
         </p>
       </div>
 
-      <!-- PROJECTS SECTION -->
       <div class="projects">
         <div class="project-box">
           <div class="project-description">
@@ -400,6 +400,64 @@
       <i class="fa-solid fa-desktop background-icon"></i>
     </section>
 
+    <section id="contact" class="contact-section">
+      <div class="center-content contact-header-box">
+        <div class="heading-shadow-box">
+          <i class="fa-solid fa-code"></i>
+          <h2 class="heading-shadow-text">Contact</h2>
+        </div>
+
+        <h2 class="section-heading contact-heading">Contact Me</h2>
+
+        <p>
+          Feel free to Contact me by submitting the form below and I will get
+          back to you as soon as possible
+        </p>
+
+        <a href="" target="_blank" class="button cv-link">Get my CV</a>
+      </div>
+
+      <form id="contact-form" name="submit-to-google-sheet">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="e.g., John Doe"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="e.g., john@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="e.g., Hi there, I'd like to inquire about..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="button" id="submitButton">
+          Send Message
+        </button>
+        <span class="response" id="response"></span>
+      </form>
+    </section>
+
     <footer>
       <ul class="social-list">
         <li>
@@ -453,14 +511,10 @@
       </ul>
 
       <div>
-        <p>&copy; Haya Abu-Raed 2024</p>
+        <p>&copy; Haya Abu-Raed <year>2024</year></p>
       </div>
     </footer>
 
-    <script>
-      setTimeout(() => {
-        document.getElementById("splash").classList.toggle("fade-up");
-      }, 2000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
