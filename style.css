@@ -884,6 +884,10 @@ nav li {
   rotate: 10deg;
 }
 
+.vibetube-links-box {
+  gap: 1.5rem;
+}
+
 @media screen and (max-width: 1024px) {
   .project-box:nth-child(even),
   .project-box:nth-child(odd) {
