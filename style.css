@@ -1044,7 +1044,6 @@ footer {
 }
 
 .social-list li {
-  /* display: inline-block; */
   min-height: 50px;
   display: flex;
   justify-content: center;
@@ -1058,10 +1057,6 @@ footer {
   font-size: 1.75rem;
   padding-block: 0.5rem;
   padding-inline: 1rem;
-}
-
-.social-list a:hover {
-  font-size: 2.3rem;
 }
 
 .social-list .github:hover {
