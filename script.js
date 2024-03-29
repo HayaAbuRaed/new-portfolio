@@ -1,5 +1,6 @@
 setTimeout(() => {
   document.getElementById("splash").classList.toggle("fade-up");
+  document.body.style.overflow = "auto";
 }, 2000);
 
 const scriptURL =
