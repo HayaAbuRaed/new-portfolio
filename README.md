@@ -6,7 +6,7 @@
 
 <br/>
 <div align="center">
-    <img src="assets/portfolio-preview.png" width="400">
+    <img src="assets/projects/portfolio-preview.png" width="400">
 </div>
 <br/>
 

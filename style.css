@@ -127,7 +127,8 @@ section {
 .hero-section {
   display: block;
   height: 100vh;
-  background: url("assets/main-background.jpg") no-repeat center / cover fixed;
+  background: url("assets/backgrounds/main-background.jpg") no-repeat center /
+    cover fixed;
   color: var(--text-secondary-color);
   padding-inline: 0;
 
@@ -541,12 +542,10 @@ nav li {
 
 /********** EXPERIENCE SECTION **********/
 .experience-section {
-  /* background-image: url(assets/exp-background4.jpg); */
-  background-image: url(assets/exp-background.jpg);
+  background-image: url(assets/backgrounds/exp-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
   position: relative;
   z-index: 100;
   color: var(--text-secondary-color);
