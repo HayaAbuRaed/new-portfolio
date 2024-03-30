@@ -127,7 +127,8 @@ section {
 .hero-section {
   display: block;
   height: 100vh;
-  background: url("assets/main-background.jpg") no-repeat center / cover fixed;
+  background: url("assets/backgrounds/main-background.jpg") no-repeat center /
+    cover fixed;
   color: var(--text-secondary-color);
   padding-inline: 0;
 
@@ -164,7 +165,7 @@ nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
+  gap: 0.85em;
 }
 
 nav a {
@@ -172,13 +173,13 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.15s ease-out;
+  border-inline: 0.15rem solid transparent;
 }
 
 nav a:hover {
-  color: #d4d5d6;
-  font-size: 1.1rem;
-  transform: scale(1.1);
+  border-bottom: 0.15rem solid var(--primary-color);
+  padding-bottom: 0.25rem;
 }
 
 nav li {
@@ -541,12 +542,10 @@ nav li {
 
 /********** EXPERIENCE SECTION **********/
 .experience-section {
-  /* background-image: url(assets/exp-background4.jpg); */
-  background-image: url(assets/exp-background.jpg);
+  background-image: url(assets/backgrounds/exp-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
   position: relative;
   z-index: 100;
   color: var(--text-secondary-color);
@@ -884,6 +883,10 @@ nav li {
   rotate: 10deg;
 }
 
+.vibetube-links-box {
+  gap: 1.5rem;
+}
+
 @media screen and (max-width: 1024px) {
   .project-box:nth-child(even),
   .project-box:nth-child(odd) {
@@ -1044,7 +1047,6 @@ footer {
 }
 
 .social-list li {
-  /* display: inline-block; */
   min-height: 50px;
   display: flex;
   justify-content: center;
@@ -1058,10 +1060,6 @@ footer {
   font-size: 1.75rem;
   padding-block: 0.5rem;
   padding-inline: 1rem;
-}
-
-.social-list a:hover {
-  font-size: 2.3rem;
 }
 
 .social-list .github:hover {
@@ -1137,6 +1135,11 @@ footer div {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(225, 5, 99, 0.71);
+}
+
+body {
+  /* Hide the scrollbar initially */
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
